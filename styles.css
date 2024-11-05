@@ -1,0 +1,130 @@
+/* Общие стили */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Заголовок */
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Навигация */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #45a049;
+}
+
+/* Основной контент */
+main {
+    padding: 20px;
+}
+
+/* Заголовки */
+h2 {
+    color: #35424a;
+    margin-top: 0;
+}
+
+/* Сетка для продуктов */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+/* Карточка продукта */
+.product {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопки */
+button {
+    background: #35424a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* Стили для секций */
+section {
+    margin-bottom: 40px;
+}
+
+/* Подвал */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr; /* Один столбец на маленьких экранах */
+    }
+}
+
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+}
+
+.product img {
+    width: 80%; /* Уменьшенная ширина изображения */
+    max-width: 200px; /* Максимальная ширина изображения */
+    height: auto; /* Сохраняет пропорции */
+}
