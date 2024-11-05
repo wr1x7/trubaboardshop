@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>trubaboardshop</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href=".js">
-    
 </head>
 <body>
     <header>
@@ -20,6 +18,7 @@
                 <li><a href="#contact">Контакты</a></li>
             </ul>
         </nav>
+        <button id="cart-button">Корзина</button>
     </header>
 
     <main>
@@ -30,51 +29,51 @@
 
         <section id="boards">
             <h2>Сноуборды</h2>
-            <div class="product">
+            <div class="product" data-name="Сноуборд Nitro BANKER" data-price="78650">
                 <h3>Сноуборд Nitro BANKER</h3>
-                <img src="images/Nitro BANKER.jpg" alt="Сноуборд Nitro BANKER">
-                <p>Описание сноуборда сноуборда Nitro BANKER</p>
+                <img src="images/Nitro_BANKER.jpg" alt="Сноуборд Nitro BANKER">
+                <p>Описание сноуборда Nitro BANKER</p>
                 <p>Цена: 78 650 ₽</p>
-                <button>Купить</button>
+                <button class="buy-button">Купить</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Сноуборд Bataleon SPIRIT" data-price="52030">
                 <h3>Сноуборд Bataleon SPIRIT</h3>
-                <img src="images/Bataleon SPIRIT.jpg" alt="Сноуборд Bataleon SPIRIT">
+                <img src="images/Bataleon_SPIRIT.jpg" alt="Сноуборд Bataleon SPIRIT">
                 <p>Описание сноуборда Bataleon SPIRIT</p>
                 <p>Цена: 52 030 ₽</p>
-                <button>Купить</button>
+                <button class="buy-button">Купить</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Сноуборд Rome SDS MECHANIC" data-price="48400">
                 <h3>Сноуборд Rome SDS MECHANIC</h3>
-                <img src="images/Rome SDS MECHANIC.jpg" alt="Сноуборд Rome SDS MECHANIC">
+                <img src="images/Rome_SDS_MECHANIC.jpg" alt="Сноуборд Rome SDS MECHANIC">
                 <p>Описание сноуборда Rome SDS MECHANIC</p>
                 <p>Цена: 48 400 ₽</p>
-                <button>Купить</button>
+                <button class="buy-button">Купить</button>
             </div>
         </section>
 
         <section id="gear">
             <h2>Снаряжение</h2>
-            <div class="product">
+            <div class="product" data-name="Ботинки для сноуборда Nitro CYPRESS BOA" data-price="48400">
                 <h3>Ботинки для сноуборда Nitro CYPRESS BOA</h3>
-                <img src="images/Nitro CYPRESS BOA.jpg" alt="Ботинки для сноуборда Nitro CYPRESS BOA">
+                <img src="images/Nitro_CYPRESS_BOA.jpg" alt="Ботинки для сноуборда Nitro CYPRESS BOA">
                 <p>Описание ботинок Nitro CYPRESS BOA</p>
                 <p>Цена: 48 400 ₽</p>
-                <button>Купить</button>
+                <button class="buy-button">Купить</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Шлем Level VIGIL" data-price="8140">
                 <h3>Шлем Level VIGIL</h3>
-                <img src="images/Шлем Level VIGIL.jpg" alt="Шлем Level VIGIL">
-                <p>Описание шлема</p>
+                <img src="images/Level_VIGIL.jpg" alt="Шлем Level VIGIL">
+                <p>Описание шлема Level VIGIL</p>
                 <p>Цена: 8 140 ₽</p>
-                <button>Купить</button>
+                <button class="buy-button">Купить</button>
             </div>
-            <div class="product">
+            <div class="product" data-name="Очки маска Smith FRONTIER" data-price="5500">
                 <h3>Очки маска Smith FRONTIER</h3>
-                <img src="images/Очки маска Smith FRONTIER.jpg" alt="Очки маска Smith FRONTIER">
+                <img src="images/Smith_FRONTIER.jpg" alt="Очки маска Smith FRONTIER">
                 <p>Описание очков Smith FRONTIER</p>
                 <p>Цена: 5 500 ₽</p>
-                <button>Купить</button>
+                <button class="buy-button">Купить</button>
             </div>
         </section>
 
@@ -85,13 +84,26 @@
 
         <section id="contact">
             <h2>Контакты</h2>
-            <button> Email: @trubaboardshop.com</button>
+            <button>Email: info@trubaboardshop.com</button>
             <button>Телефон: +7 (922) 701-16-60</button>
         </section>
+
+        <!-- Модальное окно корзины -->
+        <div id="cart-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span id="close-cart" class="close">&times;</span>
+                <h2>Корзина</h2>
+                <div id="cart-items"></div>
+                <p>Итого: <span id="cart-total">0</span> ₽</p>
+                <button id="checkout-button">Оформить заказ</button>
+            </div>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Сноуборд Магазин. Все права защищены.</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
